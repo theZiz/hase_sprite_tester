@@ -17,7 +17,7 @@ BUILD = ./build/$(TARGET)/hase_sprite_tester
 SPARROW_LIB = $(SPARROW_FOLDER)/build/$(TARGET)/sparrow3d
 ifeq ($(TARGET),win32)
 	#the BUILDING_DLL is important for the linking...
-	STATIC = $(SPARROW_LIB)/libsparrowNet_static.a -DBUILDING_DLL
+	STATIC = $(SPARROW_LIB)/libsparrow3d_static.a -DBUILDING_DLL
 endif
 else
 TARGET = "Default (change with make TARGET=otherTarget. See All targets with make targets)"

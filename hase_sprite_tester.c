@@ -106,11 +106,10 @@ int main(int argc, char **argv)
 		printf("Usage: hase_sprite_tester image\n");
 		return 1;
 	}
-	spSetDefaultWindowSize(320,320);
 	spInitCore();
 	spSetAffineTextureHack(0); //We don't need it :)
 	spInitMath();
-	screen = spCreateDefaultWindow();
+	screen = spCreateWindow(320,320,0,1);
 	resize(screen->w,screen->h);
 	spSetZSet(0);
 	spSetZTest(0);
