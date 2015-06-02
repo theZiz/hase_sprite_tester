@@ -66,7 +66,7 @@ void draw()
 	spFlip();
 }
 
-int jump = -200;
+int jump = -201;
 
 int calc(Uint32 steps)
 {
@@ -80,11 +80,12 @@ int calc(Uint32 steps)
 		else
 			rad += 128;
 		if (jump > SP_PI/6/128)
-			jump = -200;
+			jump = -201;
 		if (rad >= 2*SP_PI)
 		{
-			jump = -200;
+			jump = -201;
 			rad = 0;
+			printf("%i\n",sprite->wholeDuration);
 		}
 	}
 	if (spGetInput()->button[SP_BUTTON_START])
